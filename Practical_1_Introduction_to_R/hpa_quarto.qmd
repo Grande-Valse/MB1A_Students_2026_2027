@@ -1,0 +1,14 @@
+---
+title: "HPA analysis: Brain"
+author: "Nathan Chiu"
+---
+Aim: To find the total number of genes with regionally elevated expression in the forebrain - ie the cerebral cortex, basal ganglia, thalamus and hypothalamus - for humans, mice and pigs.
+```{r}
+human_forebrain_elevation <- sum(180, 83, 57, 110)
+mouse_forebrain_elevation <- sum(55, 185, 98, 60)
+pig_forebrain_elevation <- sum(109, 157, 31, 45)
+print(paste("number of genes elevated in human forebrain is", human_forebrain_elevation))
+print(paste("number of genes elevated in mouse forebrain is", mouse_forebrain_elevation))
+print(paste("number of genes elevated in pig forebrain is", pig_forebrain_elevation))
+```
+As we can see, the human forebrain displays the greatest number of elevated genes in the forebrain.
