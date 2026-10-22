@@ -1,0 +1,63 @@
+---
+title: "Practical 1 Excersises"
+author: "Nathan Chiu"
+---
+Functions take inputs (called arguments) and usually provide an output. Below are examples:
+```{r}
+sqrt(9)
+round(3.14159)
+round(sqrt(10))
+#examples of functions; these all only accept number arguments.
+#round() by default rounds to the nearest whole number.
+```
+Arguments can alter how a function works. For example, the round function can have the digits rounded to change by adding "digits=x". Some functions have preordered arguments see the "seq()" function:
+```{r}
+round(3.14159)
+round(3.14159, digits=2)
+print(seq(1, 10, 2))
+print(seq(by = 2, from = 1, to = 10))
+#seq() by deafault orders 3 arguments in the order of: "from" - the starting number; "to" - the end number; "by" - the increments increasing from the starting number. The order can be changed by typing out the arguments manually.
+```
+```{r}
+print(rep(5, 7))
+print(rep(times=7, x=5))
+#rep function repeats a variable a set amount of times.
+```
+Types of variables (x <-): numerical; characters (strings) aka text; logical (TRUE or FALSE). class() function can determine what type of variable something is.
+```{r}
+x <- 2e-1
+print(x)
+print(class(x))
+y <- "string"
+print(y)
+print(class(y))
+z <- TRUE
+print(z)
+print(class(z))
+```
+Creating variables to hold experimental data
+```{r}
+# my answer
+cell_one <- "CX1"
+cell_two <- "CX2"
+cell_one_treated <- TRUE
+cell_two_treated <- FALSE
+num_cell_one_before <- 5415
+num_cell_one_after <- 1432
+num_cell_two_before <- 8123
+num_cell_two_after <- 7543
+
+# given answer
+cell_id_1 <- "CX1"
+cell_id_2 <- "CX2"
+
+treated_1 <- TRUE
+treated_2 <- FALSE
+
+n_before_1 <- 5415
+n_before_2 <- 8123
+
+n_after_1 <- 1432
+n_after_2 <- 7543
+```
+
