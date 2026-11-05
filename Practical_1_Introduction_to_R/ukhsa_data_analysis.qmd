@@ -1,0 +1,29 @@
+---
+title: "Practical_1_Introduction_to_R/ukhsa_data_analysis"
+author: "Nathan Chiu"
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+
+COVID_19 <- read_csv("data/ukhsa-chart-COVID-download.csv")
+
+gt(head(COVID_19))
+# head() function visualises just the first 10 lines of data
+```
+
+```{r}
+COVID_19 <- read_csv("data/ukhsa-chart-COVID-download.csv")
+
+ggplot(COVID_19, aes(
+  x = date,
+  y = metric_value
+)) +
+  geom_line(colour = "cyan") +
+  xlab("Date") +
+  ylab("Cases per 100000 people") +
+  ggtitle("COVID-19 Cases by Date")
+
+```
